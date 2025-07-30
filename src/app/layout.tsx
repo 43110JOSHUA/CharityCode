@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/nav/NavBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
