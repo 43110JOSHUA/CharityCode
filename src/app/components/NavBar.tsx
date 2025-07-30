@@ -4,9 +4,11 @@ import Avatar from "./Avatar";
 
 const NavBar = () => {
   return (
-    <nav className="bg-body-tertiary d-flex justify-content-between align-items-center py-2 px-2 px-md-5  ">
-      <Avatar src="/CCicon.png" />
-      <h2>Your tagline here</h2>
+    <nav className="bg-body-tertiary d-flex justify-content-between align-items-center py-2 px-4 px-md-5  ">
+      <div className="d-flex d-wrap gap-3 align-items-center">
+        <Avatar src="/CCicon.png" />
+        <h4 className="pt-2">Charity Code</h4>
+      </div>
     </nav>
   );
 };
