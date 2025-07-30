@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.3.7",
     "firebase": "^12.0.0",
     "firebase-admin": "^13.4.0",
     "next": "15.4.3",
