@@ -7,12 +7,12 @@ import { FirebaseStorage, getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCRrQ7uSkxM9dwgbCrCWU9J8YRPwuR9CG4",
-  authDomain: "charity-code.firebaseapp.com",
-  projectId: "charity-code",
-  storageBucket: "charity-code.firebasestorage.app",
-  messagingSenderId: "44221147263",
-  appId: "1:44221147263:web:d16c520ebf7e708269774a"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!
 };
 
 // Initialize Firebase
