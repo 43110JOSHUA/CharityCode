@@ -2,7 +2,9 @@
 @import "../node_modules/bootstrap/scss/variables";
 
 $custom-colors: (
-  "tan": #ddca90,
+  "tan": #f8f6ef,
+  "dark-tan": #f7f3e8,
+  "border-tan": #e0ddd2,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
