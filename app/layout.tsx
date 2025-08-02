@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../scss/custom.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 import NavBar from "./components/nav/NavBar";
