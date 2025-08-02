@@ -10,9 +10,6 @@ const SearchBar = () => {
         placeholder="Search for projects..."
         aria-label="Search"
       />
-      <span className="input-group-text">
-        <i className="bi bi-search"></i>
-      </span>
     </div>
   );
 };
