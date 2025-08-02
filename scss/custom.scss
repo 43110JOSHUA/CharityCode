@@ -1,0 +1,12 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "tan": #ddca90,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// include all of Boostrap
+@import "../node_modules/bootstrap/scss/bootstrap";
