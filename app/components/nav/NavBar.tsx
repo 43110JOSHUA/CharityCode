@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-tan border-border-tan border-bottom d-flex gap-3 justify-content-between align-items-center py-2 px-3 px-md-5  ">
+      <nav className="border-bottom d-flex gap-3 justify-content-between align-items-center py-2 px-3 px-md-5 bg-tan border-border-tan">
         <div className="d-flex gap-2 align-items-center">
           <Avatar src="/CCicon.png" />
           <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap">

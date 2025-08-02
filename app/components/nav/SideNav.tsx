@@ -20,7 +20,7 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
 
       {/* Side Navigation */}
       <div
-        className={`position-fixed top-0 end-0 h-100 bg-white shadow`}
+        className={`position-fixed top-0 end-0 h-100 shadow bg-tan`}
         style={{
           width: "250px",
           zIndex: 1050,
@@ -29,7 +29,7 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
         }}
       >
         {/* Header */}
-        <div className="d-flex justify-content-between align-items-center p-3 border-bottom">
+        <div className="d-flex justify-content-between align-items-center p-3 border-bottom border-border-tan">
           <h5 className="mb-0">Menu</h5>
           <button className="btn btn-sm" onClick={onClose}>
             ✕
@@ -39,8 +39,12 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
         {/* Content */}
         <div className="p-3">
           <div className="d-grid gap-3">
-            <button className="btn btn-primary">Explore</button>
-            <button className="btn btn-secondary">Dashboard</button>
+            <button className="btn btn-dark-tan border-border-tan text-muted">
+              Explore
+            </button>
+            <button className="btn btn-dark-tan border-border-tan text-muted">
+              Dashboard
+            </button>
           </div>
         </div>
       </div>
