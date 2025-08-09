@@ -6,18 +6,38 @@ export default function Home() {
     <div className="bg-light-tan min-vh-100">
       <div className="container py-5">
         <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h1 className="display-4 fw-bold mb-4">Welcome to Charity Code</h1>
-            <p className="lead">
-              Helping developers build meaningful projects for real-world
+          <div className="col-12 text-center mb-3 mt-5">
+            <span className="badge rounded-pill text-bg-light-orange fs-6 px-3 py-2">
+              🎉 Released v0.0.1
+            </span>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 text-center mb-3">
+            <h1 className="display-4 fw-bold mb-3">
+              Helping developers build meaningful solutions to real-world
               problems.
-            </p>
+            </h1>
+            <p className="lead">Helping organizations achieve their goals.</p>
+          </div>
+        </div>
+
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <div className="d-flex gap-3 justify-content-center flex-wrap">
+              <button className="btn btn-light-green btn-lg px-4">
+                Build a Project
+              </button>
+              <button className="btn btn-outline-light-green btn-lg px-4">
+                List a Project
+              </button>
+            </div>
           </div>
         </div>
 
         <div className="row g-4">
           <div className="col-md-6 col-lg-4">
-            <div className="card h-100 shadow">
+            <div className="card h-100 shadow border-danger border-3">
               <div className="card-body">
                 <h5 className="card-title">For Developers</h5>
                 <p className="card-text">
@@ -30,9 +50,9 @@ export default function Home() {
           </div>
 
           <div className="col-md-6 col-lg-4">
-            <div className="card h-100 shadow">
+            <div className="card h-100 shadow border-success border-3">
               <div className="card-body">
-                <h5 className="card-title">For Charities</h5>
+                <h5 className="card-title">For Organizations</h5>
                 <p className="card-text">
                   Connect with skilled volunteer developers who can help you
                   create websites, apps, and digital tools to expand your reach
@@ -43,7 +63,7 @@ export default function Home() {
           </div>
 
           <div className="col-md-6 col-lg-4">
-            <div className="card h-100 shadow">
+            <div className="card h-100 shadow border-warning border-3">
               <div className="card-body">
                 <h5 className="card-title">Our Mission</h5>
                 <p className="card-text">
@@ -52,20 +72,6 @@ export default function Home() {
                   drive positive social change through innovative solutions.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row mt-5">
-          <div className="col-12 text-center">
-            <h2 className="mb-4">Get Started Today</h2>
-            <div className="d-flex gap-3 justify-content-center flex-wrap">
-              <button className="btn btn-dark btn-lg px-4">
-                Join as Developer
-              </button>
-              <button className="btn btn-dark btn-lg px-4">
-                Register Charity
-              </button>
             </div>
           </div>
         </div>

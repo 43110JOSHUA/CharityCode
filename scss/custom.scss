@@ -7,6 +7,8 @@ $custom-colors: (
   "dark-tan": #f5f2eb,
   "darker-tan": #f0e9d8,
   "border-tan": #d7d5cd,
+  "light-orange": #f8d1ad,
+  "light-green": #298064,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
