@@ -5,6 +5,7 @@ import Avatar from "./Avatar";
 import IconButton from "./IconButton";
 import SearchBar from "./SearchBar";
 import SideNav from "./SideNav";
+import PageBorder from "../PageBorder";
 
 const NavBar = () => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
@@ -15,16 +16,20 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="border-bottom d-flex gap-3 justify-content-between align-items-center sticky-top py-2 px-3 px-md-5 bg-tan border-border-tan">
-        <div className="d-flex gap-2 align-items-center">
-          <Avatar src="/CCicon.png" />
-          <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap">
-            Charity Code
-          </h4>
-        </div>
-        <SearchBar />
-        <IconButton icon="bi bi-list" onClick={toggleSideNav} />
-      </nav>
+      <div className="bg-tan sticky-top border-bottom border-border-tan">
+        <PageBorder>
+          <nav className="d-flex gap-3 justify-content-between align-items-center py-2 px-3 px-md-5">
+            <div className="d-flex gap-2 align-items-center">
+              <Avatar src="/CCicon.png" />
+              <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap">
+                Charity Code
+              </h4>
+            </div>
+            <SearchBar />
+            <IconButton icon="bi bi-list" onClick={toggleSideNav} />
+          </nav>
+        </PageBorder>
+      </div>
 
       <SideNav isOpen={isSideNavOpen} onClose={() => setIsSideNavOpen(false)} />
     </>

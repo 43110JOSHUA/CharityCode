@@ -1,81 +1,86 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import PageBorder from "./components/PageBorder";
 
 export default function Home() {
   return (
-    <div className="bg-light-tan min-vh-100">
-      <div className="container py-5">
-        <div className="row">
-          <div className="col-12 text-center mb-3 mt-5">
-            <span className="badge rounded-pill text-bg-light-orange fs-6 px-3 py-2">
-              🎉 Released v0.0.1
-            </span>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12 text-center mb-3">
-            <h1 className="display-4 fw-bold mb-3">
-              Helping developers build meaningful solutions to real-world
-              problems.
-            </h1>
-            <p className="lead">Helping organizations achieve their goals.</p>
-          </div>
-        </div>
-
-        <div className="row mb-5">
-          <div className="col-12 text-center">
-            <div className="d-flex gap-3 justify-content-center flex-wrap">
-              <button className="btn btn-light-green btn-lg px-4">
-                Build a Project
-              </button>
-              <button className="btn btn-outline-light-green btn-lg px-4">
-                List a Project
-              </button>
+    <div className="bg-light-tan">
+      <PageBorder>
+        <div className="container py-5">
+          <div className="row">
+            <div className="col-12 text-center mb-3 mt-5">
+              <span className="badge rounded-pill text-bg-light-orange fs-6 px-3 py-2">
+                🎉 Released v0.0.1
+              </span>
             </div>
           </div>
-        </div>
+          <div className="row">
+            <div className="col-12 text-center mb-3">
+              <h1 className="display-4 fw-bold mb-3">
+                Helping developers build meaningful solutions to real-world
+                problems.
+              </h1>
+              <p className="lead">Helping organizations achieve their goals.</p>
+            </div>
+          </div>
 
-        <div className="row g-4">
-          <div className="col-md-6 col-lg-4">
-            <div className="card h-100 shadow border-danger border-3">
-              <div className="card-body">
-                <h5 className="card-title">For Developers</h5>
-                <p className="card-text">
-                  Use your coding skills to help charitable organizations build
-                  and improve their digital presence. Contribute to meaningful
-                  projects that make a real difference in the world.
-                </p>
+          <div className="row mb-5">
+            <div className="col-12 text-center">
+              <div className="d-flex gap-3 justify-content-center flex-wrap">
+                <button className="btn btn-light-green btn-lg px-4">
+                  Build a Project
+                </button>
+                <button className="btn btn-outline-light-green btn-lg px-4">
+                  List a Project
+                </button>
               </div>
             </div>
           </div>
 
-          <div className="col-md-6 col-lg-4">
-            <div className="card h-100 shadow border-success border-3">
-              <div className="card-body">
-                <h5 className="card-title">For Organizations</h5>
-                <p className="card-text">
-                  Connect with skilled volunteer developers who can help you
-                  create websites, apps, and digital tools to expand your reach
-                  and improve your impact in the community.
-                </p>
+          <div className="row g-4">
+            <div className="col-md-6 col-lg-4">
+              <div className="card h-100 shadow border-danger border-3">
+                <div className="card-body">
+                  <h5 className="card-title">For Developers</h5>
+                  <p className="card-text">
+                    Use your coding skills to help charitable organizations
+                    build and improve their digital presence. Contribute to
+                    meaningful projects that make a real difference in the
+                    world.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-md-6 col-lg-4">
-            <div className="card h-100 shadow border-warning border-3">
-              <div className="card-body">
-                <h5 className="card-title">Our Mission</h5>
-                <p className="card-text">
-                  To bridge the gap between technology professionals and
-                  charitable organizations, creating powerful partnerships that
-                  drive positive social change through innovative solutions.
-                </p>
+            <div className="col-md-6 col-lg-4">
+              <div className="card h-100 shadow border-success border-3">
+                <div className="card-body">
+                  <h5 className="card-title">For Organizations</h5>
+                  <p className="card-text">
+                    Connect with skilled volunteer developers who can help you
+                    create websites, apps, and digital tools to expand your
+                    reach and improve your impact in the community.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 col-lg-4">
+              <div className="card h-100 shadow border-warning border-3">
+                <div className="card-body">
+                  <h5 className="card-title">Our Mission</h5>
+                  <p className="card-text">
+                    To bridge the gap between technology professionals and
+                    charitable organizations, creating powerful partnerships
+                    that drive positive social change through innovative
+                    solutions.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </PageBorder>
     </div>
   );
 }
