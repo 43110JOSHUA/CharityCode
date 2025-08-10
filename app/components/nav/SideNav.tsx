@@ -20,9 +20,8 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
 
       {/* Side Navigation */}
       <div
-        className={`position-fixed top-0 end-0 h-100 shadow bg-tan`}
+        className={`side-nav-container`}
         style={{
-          width: "250px",
           zIndex: 1050,
           transform: isOpen ? "translateX(0)" : "translateX(100%)",
           transition: "transform 0.3s ease-in-out",
