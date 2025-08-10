@@ -11,7 +11,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 }: IconButtonProps) => (
   <button
     type="button"
-    className={`btn btn-outline-dark btn-icon px-2 d-flex justify-content-center align-items-center`}
+    className={`btn btn-dark-tan border-border-tan btn-icon px-2 d-flex justify-content-center align-items-center`}
     style={{ width: "40px", height: "40px" }}
     onClick={onClick}
   >
