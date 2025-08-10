@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Avatar from "./Avatar";
-import IconButton from "./IconButton";
+import MenuButton from "./MenuButton";
 import SearchBar from "./SearchBar";
 import SideNav from "./SideNav";
 import PageBorder from "../PageBorder";
@@ -26,7 +26,7 @@ const NavBar = () => {
               </h4>
             </div>
             <SearchBar />
-            <IconButton icon="bi bi-list" onClick={toggleSideNav} />
+            <MenuButton icon="bi bi-list" onClick={toggleSideNav} />
           </nav>
         </PageBorder>
       </div>
