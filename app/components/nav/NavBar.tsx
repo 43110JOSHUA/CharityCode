@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Avatar from "./Avatar";
+import Avatar from "../Avatar";
 import MenuButton from "./MenuButton";
 import SearchBar from "./SearchBar";
 import SideNav from "./SideNav";

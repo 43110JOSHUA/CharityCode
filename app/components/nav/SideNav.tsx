@@ -47,12 +47,14 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
                 Explore
               </button>
             </Link>
-            <button
-              className="btn theme-btn btn-tan border-border-tan text-muted w-100"
-              onClick={onClose}
-            >
-              Dashboard
-            </button>
+            <Link href="/dashboard" className="text-decoration-none">
+              <button
+                className="btn theme-btn btn-tan border-border-tan text-muted w-100"
+                onClick={onClose}
+              >
+                Dashboard
+              </button>
+            </Link>
           </div>
         </div>
       </div>
