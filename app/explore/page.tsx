@@ -8,12 +8,12 @@ export default function Explore() {
         <div className="text-center border-bottom pt-5 py-2">
           <h3>Explore Projects</h3>
         </div>
-        <div className="container py-3">
+        <div className="container py-3 d-flex flex-column align-items-center justify-content-center">
           <ProjectPost
             title="Food Bank Inventory App"
             status="Open"
             likes={23}
-            description="A web app to help local food banks track inventory and donations in real time. Built with React and Firebase. Looking for frontend and backend contributors."
+            description="A web app to help local food banks track inventory and donations in real time. Built with React and Firebase. Looking for frontend and backend contributors. Yall had a year Yall had a year Yall had a year."
             username="jane_doe"
             datePosted="2025-08-10"
           />
