@@ -1,5 +1,4 @@
 import React from "react";
-import "./ProjectPost.css";
 
 interface ProjectPostProps {
   title: string;
