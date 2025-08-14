@@ -40,11 +40,17 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
         <div className="p-3">
           <div className="d-grid gap-2">
             <Link href="/explore" className="text-decoration-none">
-              <button className="btn theme-btn btn-tan border-border-tan text-muted w-100">
+              <button
+                className="btn theme-btn btn-tan border-border-tan text-muted w-100"
+                onClick={onClose}
+              >
                 Explore
               </button>
             </Link>
-            <button className="btn theme-btn btn-tan border-border-tan text-muted w-100">
+            <button
+              className="btn theme-btn btn-tan border-border-tan text-muted w-100"
+              onClick={onClose}
+            >
               Dashboard
             </button>
           </div>
