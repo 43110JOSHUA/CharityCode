@@ -14,16 +14,16 @@ export default function Explore() {
             status="Open"
             likes={23}
             submissionCount={5}
-            description="A program to help local food banks track inventory and donations in real time with persistent data storage."
+            description="A program to help local food banks track inventory and donations in real time with persistent data storage. Key functions: Adding, editing, and removing items from a database, interface to display data."
             username="CharityCode"
             datePosted="08-14-2025"
           />
           <ProjectPost
-            title="Charity Event Scheduler"
+            title="Example App 2"
             status="Closed"
             likes={15}
             submissionCount={2}
-            description="A tool for non-profits to schedule, manage, and promote charity events. Built with Next.js and MongoDB. Project is currently closed for new contributors."
+            description="A calendar/scheduling tool for users to build a weekly schedule. Users should be able to add custom events, set the time and days per week, and set a location for said event. Users should also be able to remove and edit events. Users should be able to save their schedules and login to load it up."
             username="CharityCode"
             datePosted="08-14-2025"
           />

@@ -31,7 +31,7 @@ const ProjectPost: React.FC<ProjectPostProps> = ({
           </div>
           <span
             className={`badge px-3 py-2 fs-6 mb-auto ${
-              status === "Open" ? "bg-success" : "bg-secondary"
+              status === "Open" ? "bg-light-green" : "bg-secondary"
             }`}
           >
             {status}
