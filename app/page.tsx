@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import PageBorder from "./components/PageBorder";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,9 +28,11 @@ export default function Home() {
           <div className="row mb-5">
             <div className="col-12 text-center">
               <div className="d-flex gap-3 justify-content-center flex-wrap">
-                <button className="btn btn-light-green btn-lg px-4">
-                  Build a Project
-                </button>
+                <Link href="/explore" className="text-decoration-none">
+                  <button className="btn btn-light-green btn-lg px-4">
+                    Build a Project
+                  </button>
+                </Link>
                 <button className="btn btn-outline-light-green btn-lg px-4">
                   List a Project
                 </button>

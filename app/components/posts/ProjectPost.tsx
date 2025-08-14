@@ -19,7 +19,7 @@ const ProjectPost: React.FC<ProjectPostProps> = ({
   datePosted,
 }) => {
   return (
-    <button className="project-post-btn card w-100 my-2 bg-tan">
+    <button className="theme-btn card w-100 my-2 bg-tan">
       <div className="card-body">
         <div className="d-flex justify-content-between align-items-top gap-2 mb-2">
           <div className="d-flex flex-wrap gap-2">
