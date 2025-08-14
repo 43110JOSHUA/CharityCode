@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import Avatar from "./Avatar";
 import MenuButton from "./MenuButton";
 import SearchBar from "./SearchBar";
@@ -18,7 +17,7 @@ const NavBar = () => {
     <>
       <div className="bg-tan sticky-top border-bottom border-border-tan">
         <PageBorder>
-          <nav className="d-flex gap-3 justify-content-between align-items-center py-2 px-3 px-md-5">
+          <nav className="d-flex gap-3 justify-content-between align-items-center py-2 px-3">
             <div className="d-flex gap-2 align-items-center">
               <Avatar src="/CCicon.png" />
               <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap">

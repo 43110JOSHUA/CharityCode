@@ -1,3 +1,9 @@
+import PageBorder from "../components/PageBorder";
+
 export default function Login() {
-  return <div>Explore Page</div>;
+  return (
+    <div className="bg-light-tan">
+      <PageBorder>Explore Page</PageBorder>
+    </div>
+  );
 }

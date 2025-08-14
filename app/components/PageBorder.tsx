@@ -6,7 +6,7 @@ interface Props {
 
 const PageBorder = ({ children }: Props) => {
   return (
-    <div className="px-0 px-xl-5">
+    <div className="px-0 px-md-5">
       <div className="px-0 px-xl-5">
         <div className="px-0 px-xl-5">
           <div className="px-0 px-xl-5">{children}</div>
