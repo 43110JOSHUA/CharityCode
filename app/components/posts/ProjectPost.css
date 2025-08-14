@@ -1,0 +1,7 @@
+.project-post-btn {
+  transition: background 0.2s;
+}
+.project-post-btn:hover, .project-post-btn:focus {
+  background: #f6f2ea !important;
+  cursor: pointer;
+}
