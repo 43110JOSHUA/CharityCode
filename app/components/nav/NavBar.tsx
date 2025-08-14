@@ -20,7 +20,7 @@ const NavBar = () => {
           <nav className="d-flex gap-3 justify-content-between align-items-center py-2 px-3">
             <div className="d-flex gap-2 align-items-center">
               <Avatar src="/CCicon.png" />
-              <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap mb-0">
+              <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap mb-2">
                 Charity Code
               </h4>
             </div>
