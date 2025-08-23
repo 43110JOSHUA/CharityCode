@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useAuth } from "../../../context/auth";
 
 interface SideNavProps {
   isOpen: boolean;
@@ -8,6 +9,8 @@ interface SideNavProps {
 }
 
 const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
+  const auth = useAuth();
+
   return (
     <>
       {/* Backdrop */}
@@ -57,6 +60,21 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
             </Link>
           </div>
         </div>
+        {!!auth?.currentUser && (
+          <div className="mt-auto px-3 py-4">
+            <p className="text-muted text-center fs-6">
+              {auth.currentUser.email}
+            </p>
+            <button
+              className="btn theme-btn btn-tan border-border-tan text-muted w-100"
+              onClick={() => {
+                auth.logout();
+              }}
+            >
+              Logout
+            </button>
+          </div>
+        )}
       </div>
     </>
   );
