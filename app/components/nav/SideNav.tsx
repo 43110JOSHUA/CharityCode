@@ -21,7 +21,7 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
 
       {/* Side Navigation */}
       <div
-        className={`side-nav-container`}
+        className={`side-nav-container rounded-start-4`}
         style={{
           zIndex: 1050,
           transform: isOpen ? "translateX(0)" : "translateX(100%)",
@@ -29,7 +29,7 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
         }}
       >
         {/* Header */}
-        <div className="d-flex justify-content-between align-items-center p-3 border-bottom border-border-tan">
+        <div className="d-flex justify-content-between align-items-center p-3">
           <h5 className="mb-0">Menu</h5>
           <button className="btn btn-sm" onClick={onClose}>
             ✕
