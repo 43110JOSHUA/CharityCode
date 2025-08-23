@@ -33,9 +33,11 @@ export default function Home() {
                     Build a Project
                   </button>
                 </Link>
-                <button className="btn btn-outline-light-green btn-lg px-4">
-                  List a Project
-                </button>
+                <Link href="/dashboard" className="text-decoration-none">
+                  <button className="btn btn-outline-light-green btn-lg px-4">
+                    List a Project
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
