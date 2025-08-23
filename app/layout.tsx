@@ -3,6 +3,7 @@ import "../scss/custom.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 import NavBar from "./components/nav/NavBar";
+import { AuthProvider } from "../context/auth";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body>
-        <NavBar />
-        {children}
+        <AuthProvider>
+          <NavBar />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
