@@ -1,4 +1,8 @@
+"use client";
+
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
+import { auth } from "../../../firebase/client";
 
 const LoginCard: React.FC = () => (
   <div
@@ -13,7 +17,13 @@ const LoginCard: React.FC = () => (
       <p className="text-center text-muted mb-4">
         Please log in to access your dashboard.
       </p>
-      <button className="btn btn-light-green w-100">
+      <button
+        className="btn btn-light-green w-100"
+        onClick={() => {
+          const provider = new GoogleAuthProvider();
+          signInWithPopup(auth, provider);
+        }}
+      >
         <i className="bi bi-google me-2"></i>
         Continue with Google
       </button>
