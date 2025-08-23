@@ -6,7 +6,7 @@ export default function Explore() {
     <div className="bg-light-tan vh-100">
       <PageBorder>
         <div className="text-center border-bottom pt-5 py-2">
-          <h3>Explore 2 Requests</h3>
+          <h3>Explore 2 Project Ideas</h3>
         </div>
         <div className="container py-3 d-flex flex-column align-items-center justify-content-center">
           <ProjectPost
