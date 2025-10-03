@@ -1,7 +1,6 @@
 "use client";
 
 import React, { use } from "react";
-import { auth } from "../../../firebase/client";
 import { useAuth } from "../../../context/auth";
 
 export default function LoginCard() {
