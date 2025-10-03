@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { firestore } from "../../../firebase/client"; // Change to client
+import { firestore } from "../../../firebase/client";
 import { useAuth } from "../../../context/auth";
 
 export default function CreatePost() {

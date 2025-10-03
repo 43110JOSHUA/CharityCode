@@ -1,51 +1,51 @@
 import React from "react";
+import { DocumentData } from "firebase/firestore";
+
 
 interface ProjectPostProps {
-  title: string;
-  status: "Open" | "Closed";
-  likes: number;
-  description: string;
-  username: string;
-  datePosted: string;
-  submissionCount: number;
+  data: DocumentData
 }
 
-const ProjectPost: React.FC<ProjectPostProps> = ({
-  title,
-  status,
-  likes,
-  description,
-  username,
-  datePosted,
-  submissionCount,
-}) => {
+export function ProjectPost({ data }: ProjectPostProps) {
+  // Format timestamp to readable date
+  const formatDate = (timestamp: any) => {
+    if (!timestamp) return "Just now";
+
+    try {
+      const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+      return date.toLocaleDateString();
+    } catch {
+      return "Just now";
+    }
+  };
+
   return (
     <button className="theme-btn card w-100 my-2 bg-tan">
       <div className="card-body">
         <div className="d-flex justify-content-between align-items-top gap-2 mb-2">
           <div className="d-flex flex-wrap gap-2">
-            <h5 className="card-title text-start mb-0">{title}</h5>
+            <h5 className="card-title text-start mb-0">{data.title}</h5>
             <span className="text-muted text-start small mt-1">
-              {username} • {datePosted}
+              {data.username} • {formatDate(data.timestamp)}
             </span>
           </div>
           <span
             className={`badge px-3 py-2 fs-6 mb-auto ${
-              status === "Open" ? "bg-light-green" : "bg-secondary"
+              data.open ? "bg-light-green" : "bg-secondary"
             }`}
           >
-            {status}
+            {data.open ? "Open" : "Closed"}
           </span>
         </div>
-        <p className="card-text text-start mb-2">{description}</p>
+        <p className="card-text text-start mb-2">{data.shortDesc}</p>
         <div className="d-flex align-items-center gap-2 mt-3">
           <div className="d-flex align-items-center gap-1 flex-wrap">
             <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
               <i className="bi bi-heart-fill text-danger"></i>
-              {likes}
+              {data.likes.length}
             </span>
             <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
-              <i className="bi bi-upload text-primary"></i> {submissionCount}{" "}
+              <i className="bi bi-upload text-primary"></i> {data.submissions.length}{" "}
               Submissions
             </span>
           </div>
@@ -53,6 +53,4 @@ const ProjectPost: React.FC<ProjectPostProps> = ({
       </div>
     </button>
   );
-};
-
-export default ProjectPost;
+}
