@@ -63,7 +63,9 @@ const SideNav: React.FC<SideNavProps> = ({ isOpen, onClose }) => {
         {!!auth?.currentUser && (
           <div className="mt-auto px-3 py-4">
             <p className="text-muted text-center fs-6">
-              {auth.currentUser.email}
+              {auth.currentUser.email && auth.currentUser.email.length > 35
+                ? auth.currentUser.email.substring(0, 30) + "..."
+                : auth.currentUser.email}
             </p>
             <button
               className="btn theme-btn btn-tan border-border-tan text-muted w-100"
