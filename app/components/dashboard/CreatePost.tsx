@@ -1,10 +1,32 @@
 "use client";
 import React, { useState } from "react";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { firestore } from "../../../firebase/client"; // Change to client
+import { useAuth } from "../../../context/auth";
 
-const CreatePost: React.FC = () => {
+export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [shortDesc, setShortDesc] = useState("");
   const [fullDesc, setFullDesc] = useState("");
+  const auth = useAuth();
+  const username = auth?.currentUser?.displayName;
+
+  async function sendPost() {
+    await addDoc(collection(firestore, "posts"), {
+      title: title,
+      shortDesc: shortDesc,
+      fullDesc: fullDesc,
+      username: username,
+      timestamp: serverTimestamp(),
+      likes: [],
+      submissions: [],
+      open: true,
+    });
+
+    setTitle("");
+    setShortDesc("");
+    setFullDesc("");  
+  }
 
   return (
     <div className="card mb-4 bg-tan">
@@ -15,12 +37,12 @@ const CreatePost: React.FC = () => {
           <input
             type="text"
             className="form-control bg-dark-tan border-border-tan"
-            maxLength={20}
+            maxLength={30}
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(event) => setTitle(event.target.value)}
             placeholder="Project title"
           />
-          <div className="form-text">{title.length}/20</div>
+          <div className="form-text">{title.length}/30</div>
         </div>
         <div className="mb-3">
           <label className="form-label">Short Description</label>
@@ -29,7 +51,7 @@ const CreatePost: React.FC = () => {
             maxLength={200}
             rows={2}
             value={shortDesc}
-            onChange={(e) => setShortDesc(e.target.value)}
+            onChange={(event) => setShortDesc(event.target.value)}
             placeholder="Short description (max 200 chars)"
           />
           <div className="form-text">{shortDesc.length}/200</div>
@@ -41,17 +63,19 @@ const CreatePost: React.FC = () => {
             maxLength={1000}
             rows={5}
             value={fullDesc}
-            onChange={(e) => setFullDesc(e.target.value)}
+            onChange={(event) => setFullDesc(event.target.value)}
             placeholder="Full description (max 1000 chars)"
           />
           <div className="form-text">{fullDesc.length}/1000</div>
         </div>
-        <button className="btn btn-light-green w-100" disabled>
+        <button
+          className="btn btn-light-green w-100"
+          onClick={sendPost}
+          disabled={!title.trim() || !shortDesc.trim() || !fullDesc.trim()}
+        >
           Create Post
         </button>
       </div>
     </div>
   );
-};
-
-export default CreatePost;
+}

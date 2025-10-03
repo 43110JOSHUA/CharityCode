@@ -30,4 +30,4 @@ else {
     firestore = getFirestore(app);
 }
 
-export { firestore}
+export { firestore }
