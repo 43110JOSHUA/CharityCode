@@ -15,9 +15,10 @@ export function ProjectPost({ data }: ProjectPostProps) {
             <h5 className="card-title text-start mb-0">{data.title}</h5>
             <span className="text-muted text-start small mt-1">
               {data.username} •{" "}
-              {formatDistanceToNow(data.timestamp.toDate(), {
-                addSuffix: true,
-              }).replace("about ", "")}
+              {data.timestamp &&
+                formatDistanceToNow(data.timestamp.toDate(), {
+                  addSuffix: true,
+                }).replace("about ", "")}
             </span>
           </div>
           <span
