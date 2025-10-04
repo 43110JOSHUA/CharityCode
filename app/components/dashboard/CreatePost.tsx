@@ -60,13 +60,13 @@ export default function CreatePost() {
           <label className="form-label">Full Description</label>
           <textarea
             className="form-control bg-dark-tan border-border-tan"
-            maxLength={1000}
+            maxLength={3000}
             rows={5}
             value={fullDesc}
             onChange={(event) => setFullDesc(event.target.value)}
-            placeholder="Full description (max 1000 chars)"
+            placeholder="Full description (max 3000 chars)"
           />
-          <div className="form-text">{fullDesc.length}/1000</div>
+          <div className="form-text">{fullDesc.length}/3000</div>
         </div>
         <button
           className="btn btn-light-green w-100"
