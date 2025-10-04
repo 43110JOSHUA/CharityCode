@@ -1,24 +1,12 @@
 import React from "react";
 import { DocumentData } from "firebase/firestore";
-
+import { formatDistanceToNow } from "date-fns";
 
 interface ProjectPostProps {
-  data: DocumentData
+  data: DocumentData;
 }
 
 export function ProjectPost({ data }: ProjectPostProps) {
-  // Format timestamp to readable date
-  const formatDate = (timestamp: any) => {
-    if (!timestamp) return "Just now";
-
-    try {
-      const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
-      return date.toLocaleDateString();
-    } catch {
-      return "Just now";
-    }
-  };
-
   return (
     <button className="theme-btn card w-100 my-2 bg-tan">
       <div className="card-body">
@@ -26,7 +14,10 @@ export function ProjectPost({ data }: ProjectPostProps) {
           <div className="d-flex flex-wrap gap-2">
             <h5 className="card-title text-start mb-0">{data.title}</h5>
             <span className="text-muted text-start small mt-1">
-              {data.username} • {formatDate(data.timestamp)}
+              {data.username} •{" "}
+              {formatDistanceToNow(data.timestamp.toDate(), {
+                addSuffix: true,
+              }).replace("about ", "")}
             </span>
           </div>
           <span
@@ -45,8 +36,8 @@ export function ProjectPost({ data }: ProjectPostProps) {
               {data.likes.length}
             </span>
             <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
-              <i className="bi bi-upload text-primary"></i> {data.submissions.length}{" "}
-              Submissions
+              <i className="bi bi-upload text-primary"></i>{" "}
+              {data.submissions.length} Submissions
             </span>
           </div>
         </div>
