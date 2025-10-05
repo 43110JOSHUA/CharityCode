@@ -1,5 +1,6 @@
 import React from "react";
 import PageBorder from "../components/PageBorder";
+import page from "../page";
 
 interface PostData {
   title: string;
@@ -12,7 +13,7 @@ interface PostData {
   submissions: string[];
 }
 
-const page = () => {
+export default function PostPage() {
   // Mock data for styling - you'll replace this with actual data later
   const mockPost: PostData = {
     title: "Community Garden Website",
@@ -122,18 +123,7 @@ const page = () => {
                       with setup instructions.
                     </div>
                   </div>
-                  <div className="mb-3">
-                    <label className="form-label">
-                      Additional Notes (Optional)
-                    </label>
-                    <textarea
-                      className="form-control bg-dark-tan border-border-tan"
-                      rows={3}
-                      placeholder="Any additional information about your solution..."
-                      maxLength={500}
-                    />
-                    <div className="form-text">0/500</div>
-                  </div>
+
                   <button className="btn btn-primary w-100">
                     <i className="bi bi-upload me-2"></i>
                     Submit Solution
@@ -180,7 +170,6 @@ const page = () => {
                           </small>
                         </div>
                         <div className="d-flex gap-2">
-                          <span className="badge bg-light-green">1 ⭐</span>
                           <a
                             href="#"
                             className="btn btn-sm btn-outline-primary"
@@ -206,4 +195,3 @@ const page = () => {
   );
 };
 
-export default page;

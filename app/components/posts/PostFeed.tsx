@@ -35,7 +35,7 @@ export default function PostFeed() {
   return (
     <div className="container py-3 d-flex flex-column align-items-center justify-content-center">
       {posts.map((post) => (
-        <ProjectPost key={post.id} data={post.data()} />
+        <ProjectPost key={post.id} data={post.data()} id={post.id} />
       ))}
     </div>
   );
