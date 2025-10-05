@@ -24,9 +24,9 @@ export default function PostFeed() {
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const snapshotDocs = snapshot.docs;
+      const snapshotDocs = snapshot.docs
 
-      setPosts(snapshotDocs);
+      setPosts(snapshotDocs)
     });
 
     return unsubscribe;
