@@ -2,6 +2,8 @@ import React from "react";
 import PageBorder from "../components/PageBorder";
 import { getDoc, doc } from "firebase/firestore";
 import { firestore } from "../../firebase/client";
+import Link from "next/link";
+import { formatDistanceToNow } from "date-fns";
 
 const fetchPost = async (id: string) => {
   const postRef = doc(firestore, "posts", id);
@@ -23,8 +25,8 @@ export default async function PostPage({ params }: PageProps) {
         <PageBorder>
           <div className="container py-5">
             <div className="text-center">
-              <h1>Post not found</h1>
-              <p>The post you're looking for doesn't exist.</p>
+              <h1>404 - Page not found</h1>
+              <p>The page you're looking for doesn't exist.</p>
             </div>
           </div>
         </PageBorder>
@@ -40,54 +42,51 @@ export default async function PostPage({ params }: PageProps) {
             <div className="col-lg-8">
               {/* Back Button */}
               <div className="mb-4">
-                <button className="btn btn-outline-secondary">
-                  <i className="bi bi-arrow-left me-2"></i>
-                  Back to Feed
-                </button>
+                <Link href="/explore" className="text-decoration-none">
+                  <button className="btn btn theme-btn btn-tan border-border-tan text-muted">
+                    <i className="bi bi-arrow-left me-2"></i>
+                    Back to Feed
+                  </button>
+                </Link>
               </div>
 
               {/* Post Header */}
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-start mb-3">
-                    <div className="flex-grow-1">
-                      <h1 className="card-title h3 mb-2">{post.title}</h1>
-                      <div className="text-muted">
-                        <span className="me-3">
-                          <i className="bi bi-person-circle me-1"></i>
-                          {post.username}
-                        </span>
-                        <span>
-                          <i className="bi bi-clock me-1"></i>
-                          {post.timestamp
-                            ? new Date(post.timestamp.seconds * 1000).toLocaleDateString()
-                            : "Unknown"}
-                        </span>
-                      </div>
-                    </div>
-                    <span
-                      className={`badge px-3 py-2 fs-6 ${
-                        post.open ? "bg-light-green" : "bg-secondary"
-                      }`}
-                    >
-                      {post.open ? "Open" : "Closed"}
-                    </span>
-                  </div>
+                  <div className="d-flex justify-content-between align-items-top gap-2 mb-2">
+															<div className="d-flex flex-wrap gap-2">
+																<h5 className="card-title text-start mb-0">{post?.title}</h5>
+																<span className="text-muted text-start small mt-1">
+																	{post?.username} •{" "}
+																	{post?.timestamp &&
+																		formatDistanceToNow(post.timestamp.toDate(), {
+																			addSuffix: true,
+																		}).replace("about ", "")}
+																</span>
+															</div>
+															<span
+																className={`badge px-3 py-2 fs-6 mb-auto ${
+																	post?.open ? "bg-light-green" : "bg-secondary"
+																}`}
+															>
+																{post?.open ? "Open" : "Closed"}
+															</span>
+														</div>
+
+                  {/* Short Description */}
+                  <p className="">{post?.shortDesc}</p>
 
                   {/* Stats */}
-                  <div className="d-flex align-items-center gap-3 mb-3">
+                  <div className="d-flex align-items-center gap-2">
                     <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
                       <i className="bi bi-heart-fill text-danger"></i>
-                      {post.likes?.length || 0} Likes
+                      {post?.likes.length || 0} Likes
                     </span>
                     <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
                       <i className="bi bi-upload text-primary"></i>
-                      {post.submissions?.length || 0} Submissions
+                      {post?.submissions.length || 0} Submissions
                     </span>
                   </div>
-
-                  {/* Short Description */}
-                  <p className="lead mb-0">{post.shortDesc}</p>
                 </div>
               </div>
 
@@ -96,7 +95,7 @@ export default async function PostPage({ params }: PageProps) {
                 <div className="card-body">
                   <h4 className="card-title mb-3">Project Details</h4>
                   <p className="card-text" style={{ whiteSpace: "pre-wrap" }}>
-                    {post.fullDesc}
+                    {post?.fullDesc}
                   </p>
                 </div>
               </div>
@@ -142,14 +141,18 @@ export default async function PostPage({ params }: PageProps) {
                 <div className="card-body">
                   <h5 className="card-title mb-3">
                     <i className="bi bi-list-ul me-2"></i>
-                    Current Submissions ({post.submissions?.length || 0})
+                    Current Submissions ({post?.submissions.length || 0})
                   </h5>
 
                   <div className="list-group list-group-flush">
                     <div className="list-group-item bg-dark-tan border-border-tan d-flex justify-content-between align-items-center">
                       <div>
-                        <div className="fw-semibold">johndoe/garden-website</div>
-                        <small className="text-muted">Submitted 1 day ago</small>
+                        <div className="fw-semibold">
+                          johndoe/garden-website
+                        </div>
+                        <small className="text-muted">
+                          Submitted 1 day ago
+                        </small>
                       </div>
                       <div className="d-flex gap-2">
                         <span className="badge bg-light-green">3 ⭐</span>
@@ -161,8 +164,12 @@ export default async function PostPage({ params }: PageProps) {
                     </div>
                     <div className="list-group-item bg-dark-tan border-border-tan d-flex justify-content-between align-items-center">
                       <div>
-                        <div className="fw-semibold">jane-dev/community-garden</div>
-                        <small className="text-muted">Submitted 3 hours ago</small>
+                        <div className="fw-semibold">
+                          jane-dev/community-garden
+                        </div>
+                        <small className="text-muted">
+                          Submitted 3 hours ago
+                        </small>
                       </div>
                       <div className="d-flex gap-2">
                         <a href="#" className="btn btn-sm btn-outline-primary">
