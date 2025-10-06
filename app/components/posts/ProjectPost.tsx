@@ -14,9 +14,9 @@ export function ProjectPost({ data, id }: ProjectPostProps) {
       <button className="theme-btn card w-100 my-2 bg-tan">
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-top gap-2 mb-2">
-            <div className="d-flex flex-wrap gap-2">
-              <h5 className="card-title text-start">{data.title}</h5>
-              <span className="text-muted small mt-1">
+            <div className="d-flex align-items-center gap-2 flex-wrap">
+              <h5 className="card-title text-start mb-0">{data.title}</h5>
+              <span className="text-muted text-start small">
                 {data.username} •{" "}
                 {data.timestamp &&
                   formatDistanceToNow(data.timestamp.toDate(), {
