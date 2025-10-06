@@ -16,7 +16,7 @@ interface PageProps {
 }
 
 export default async function PostPage({ params }: PageProps) {
-  const { postid } = params;
+  const { postid } = await params;
   const post = await fetchPost(postid);
 
   if (!post) {
