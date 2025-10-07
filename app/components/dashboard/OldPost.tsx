@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import { DocumentData } from "firebase/firestore";
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
+import { doc, updateDoc } from "firebase/firestore";
+import { firestore } from "../../../firebase/client";
 
 interface OldPostProps {
   data: DocumentData;
@@ -9,6 +13,15 @@ interface OldPostProps {
 }
 
 const OldPost: React.FC<OldPostProps> = ({ data, id }) => {
+  const toggleOpenStatus = async () => {
+    
+    const postRef = doc(firestore, "posts", id);
+    await updateDoc(postRef, {
+      open: !data.open,
+    });
+    
+  };
+
   return (
     <div className="col-12 mb-3">
       <div className="card w-100 bg-tan">
@@ -43,7 +56,17 @@ const OldPost: React.FC<OldPostProps> = ({ data, id }) => {
               {data.submissions?.length || 0} Submissions
             </span>
             <div className="ms-auto d-flex gap-2">
-              <button className="btn btn-sm btn-outline-primary">Edit</button>
+              <button
+                className={`btn btn-sm ${
+                  data.open ? "btn-outline-danger" : "btn-outline-success"
+                }`}
+                onClick={toggleOpenStatus}
+              >
+                <i
+                  className={`bi ${data.open ? "bi-lock" : "bi-unlock"} me-1`}
+                ></i>
+                {data.open ? "Close" : "Open"}
+              </button>
               <Link href={`/${id}`} className="text-decoration-none">
                 <button className="btn btn-sm btn-outline-secondary">
                   View Submissions
