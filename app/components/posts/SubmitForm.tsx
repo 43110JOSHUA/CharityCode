@@ -67,13 +67,6 @@ export default function SubmitForm({ postId }: SubmitFormProps) {
           Submit Your Solution
         </h5>
 
-        {!isOpen && (
-          <div className="alert alert-warning mb-3">
-            <i className="bi bi-lock me-2"></i>
-            This project is closed for new submissions.
-          </div>
-        )}
-
         <p className="text-muted mb-3">
           Share your GitHub repository URL containing your solution to this
           project.
@@ -84,17 +77,13 @@ export default function SubmitForm({ postId }: SubmitFormProps) {
             <label className="form-label">GitHub Repository URL</label>
             <div className="input-group">
               <span
-                className={`input-group-text border-border-tan ${
-                  isOpen ? "bg-dark-tan" : "bg-secondary"
-                }`}
+                className={`input-group-text border-border-tan bg-dark-tan`}
               >
                 <i className="bi bi-github"></i>
               </span>
               <input
                 type="url"
-                className={`form-control border-border-tan ${
-                  isOpen ? "bg-dark-tan" : "bg-secondary"
-                }`}
+                className={`form-control border-border-tan bg-dark-tan`}
                 placeholder={
                   isOpen
                     ? "https://github.com/username/repository"
