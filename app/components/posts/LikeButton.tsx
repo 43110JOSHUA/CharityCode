@@ -42,23 +42,21 @@ export default function LikeButton({ postId }: LikeButtonProps) {
       return;
     }
 
-    try {
-      const postRef = doc(firestore, "posts", postId);
 
-      if (isLiked) {
-        // Unlike the post
-        await updateDoc(postRef, {
-          likes: arrayRemove(userId),
-        });
-      } else {
-        // Like the post
-        await updateDoc(postRef, {
-          likes: arrayUnion(userId),
-        });
-      }
-    } catch (error) {
-      console.error("Error updating like:", error);
+    const postRef = doc(firestore, "posts", postId);
+
+    if (isLiked) {
+      // Unlike the post
+      await updateDoc(postRef, {
+        likes: arrayRemove(userId),
+      });
+    } else {
+      // Like the post
+      await updateDoc(postRef, {
+        likes: arrayUnion(userId),
+      });
     }
+  
   }
 
   return (

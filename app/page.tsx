@@ -48,10 +48,10 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title">For Developers</h5>
                   <p className="card-text">
-                    Use your coding skills to help charitable organizations
-                    build and improve their digital presence. Contribute to
-                    meaningful projects that make a real difference in the
-                    world.
+                    Use your coding skills to help people, organizations, or
+                    companies build and improve their digital presence.
+                    Contribute to meaningful projects that make a real
+                    difference in the world.
                   </p>
                 </div>
               </div>
@@ -62,9 +62,9 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title">For Organizations</h5>
                   <p className="card-text">
-                    Connect with skilled volunteer developers who can help you
-                    create websites, apps, and digital tools to expand your
-                    reach and improve your impact in the community.
+                    Connect with ambitious developers who can help you create
+                    websites, apps, and digital tools to expand your reach and
+                    improve your impact in the community.
                   </p>
                 </div>
               </div>
@@ -75,10 +75,10 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title">Our Mission</h5>
                   <p className="card-text">
-                    To bridge the gap between technology professionals and
-                    charitable organizations, creating powerful partnerships
-                    that drive positive social change through innovative
-                    solutions.
+                    To empower aspiring developers by providing them with
+                    real-world project opportunities that build practical
+                    skills, create meaningful portfolios, and make a positive
+                    impact in their communities.
                   </p>
                 </div>
               </div>
