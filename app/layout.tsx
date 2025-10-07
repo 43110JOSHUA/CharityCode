@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 import NavBar from "./components/nav/NavBar";
 import { AuthProvider } from "../context/auth";
+import Footer from "./components/nav/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,6 +26,7 @@ export default function RootLayout({
           <NavBar />
           {children}
         </AuthProvider>
+        <Footer />
       </body>
     </html>
   );
