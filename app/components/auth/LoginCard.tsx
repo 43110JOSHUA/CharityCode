@@ -16,7 +16,7 @@ export default function LoginCard() {
       >
         <h5 className="mb-3 text-center">Login Required</h5>
         <p className="text-center text-muted mb-4">
-          Please log in to access your dashboard.
+          Please log in to access this feature.
         </p>
         <button
           className="btn btn-light-green w-100"

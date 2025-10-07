@@ -6,6 +6,7 @@ import Link from "next/link";
 import { formatDistanceToNow } from "date-fns";
 import SubmitForm from "../components/posts/SubmitForm";
 import SubmissionFeed from "../components/posts/SubmissionFeed";
+import LikeButton from "../components/posts/LikeButton";
 
 const fetchPost = async (id: string) => {
   const postRef = doc(firestore, "posts", id);
@@ -82,13 +83,10 @@ export default async function PostPage({ params }: PageProps) {
 
                   {/* Stats */}
                   <div className="d-flex align-items-center gap-2">
-                    <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
-                      <i className="bi bi-heart-fill text-danger"></i>
-                      {post?.likes.length || 0} Likes
-                    </span>
+                    <LikeButton postId={postid} />
                     <span className="badge rounded-pill border border-border-tan text-muted fw-normal d-flex align-items-center gap-1 fs-6">
                       <i className="bi bi-upload text-primary"></i>
-                      {post?.submissions.length || 0} Submissions
+                      {post?.submissions?.length || 0} Submissions
                     </span>
                   </div>
                 </div>
