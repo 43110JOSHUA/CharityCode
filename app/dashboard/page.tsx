@@ -4,7 +4,7 @@ import PageBorder from "../components/PageBorder";
 import LoginCard from "../components/auth/LoginCard";
 import { useAuth } from "../../context/auth";
 import CreatePost from "../components/dashboard/CreatePost";
-import OldPost from "../components/dashboard/OldPost";
+import PersonalFeed from "../components/dashboard/PersonalFeed";
 
 export default function Dashboard() {
   const auth = useAuth();
@@ -19,7 +19,7 @@ export default function Dashboard() {
               <CreatePost />
             </div>
             <div className="col-12 col-md-6">
-              <OldPost />
+              <PersonalFeed />
             </div>
           </div>
         </div>
