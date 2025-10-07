@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Submission from "./Submission";
 import { doc, onSnapshot, DocumentData } from "firebase/firestore";
 import { firestore } from "../../../firebase/client";
+import { formatDistanceToNow } from "date-fns";
 
 interface SubmissionFeedProps {
   postId: string;
@@ -12,7 +13,7 @@ interface SubmissionFeedProps {
 interface SubmissionData {
   username: string;
   githubLink: string;
-  timestamp: Date;
+  timestamp: any; // Changed from Date to any to handle various timestamp formats
 }
 
 export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
@@ -30,10 +31,8 @@ export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
         // Sort submissions by timestamp (newest first)
         const sortedSubmissions = submissionsData.sort(
           (a: SubmissionData, b: SubmissionData) => {
-            const timeA =
-              a.timestamp instanceof Date ? a.timestamp : new Date(a.timestamp);
-            const timeB =
-              b.timestamp instanceof Date ? b.timestamp : new Date(b.timestamp);
+            const timeA = a.timestamp.toDate();
+            const timeB = b.timestamp.toDate();
             return timeB.getTime() - timeA.getTime();
           }
         );
@@ -77,9 +76,7 @@ export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
                 key={index}
                 username={submission.username}
                 githubLink={submission.githubLink}
-                timestamp={`Submitted ${new Date(
-                  submission.timestamp
-                ).toLocaleDateString()}`}
+                timestamp={formatDistanceToNow(submission.timestamp.toDate(), { addSuffix: true })}
               />
             ))}
           </div>
