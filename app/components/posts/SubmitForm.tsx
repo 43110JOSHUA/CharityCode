@@ -1,22 +1,30 @@
 "use client";
+
 import React, { useState } from "react";
+import { doc, updateDoc, arrayUnion, serverTimestamp } from "firebase/firestore";
+import { firestore } from "../../../firebase/client";
+import { useAuth } from "../../../context/auth";
 
 interface SubmitFormProps {
   postId: string;
-  onSubmit?: (githubUrl: string) => void;
 }
 
-const SubmitForm = ({ postId, onSubmit }: SubmitFormProps) => {
+export default function SubmitForm({ postId }: SubmitFormProps) {
   const [githubUrl, setGithubUrl] = useState("");
+  const auth = useAuth();
+  const username = auth?.currentUser?.displayName;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (onSubmit) {
-      onSubmit(githubUrl);
-    }
-    // For now, just log the submission
-    console.log("Submission:", { postId, githubUrl });
-  };
+  async function sendSubmission() {
+    const postRef = doc(firestore, "posts", postId);
+    await updateDoc(postRef, {
+      submissions: arrayUnion({
+        username: username || "Anonymous",
+        githubLink: githubUrl,
+        timestamp: new Date(),
+      }),
+    });
+    setGithubUrl("");
+  }
 
   return (
     <div className="card bg-tan mb-4">
@@ -29,7 +37,7 @@ const SubmitForm = ({ postId, onSubmit }: SubmitFormProps) => {
           Share your GitHub repository URL containing your solution to this
           project.
         </p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={sendSubmission}>
           <div className="mb-3">
             <label className="form-label">GitHub Repository URL</label>
             <div className="input-group">
@@ -59,5 +67,3 @@ const SubmitForm = ({ postId, onSubmit }: SubmitFormProps) => {
     </div>
   );
 };
-
-export default SubmitForm;
