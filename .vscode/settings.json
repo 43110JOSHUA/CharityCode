@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/41de3a15-a9a2-4224-8761-27c3161386ab/resourceGroups/appsvc_linux_westus2/providers/Microsoft.Web/sites/CharityCoder",
+    "appService.deploySubpath": "."
+}

@@ -15,11 +15,11 @@ const fetchPost = async (id: string) => {
 };
 
 interface PageProps {
-  params: { postid: string };
+  params: Promise<{ postid: string }>; // Changed to Promise
 }
 
 export default async function PostPage({ params }: PageProps) {
-  const { postid } = await params;
+  const { postid } = await params; // This line is already correct
   const post = await fetchPost(postid);
 
   if (!post) {
