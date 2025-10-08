@@ -25,7 +25,7 @@ const NavBar = () => {
               </Link>
               <Link href="/" className="text-decoration-none text-dark">
                 <h4 className="pt-2 fw-bold d-none d-sm-block text-nowrap mb-2">
-                  Charity Code
+                  Charity Coder
                 </h4>
               </Link>
             </div>

@@ -14,7 +14,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>1. Acceptance of Terms</h4>
                   <p>
-                    By accessing and using Charity Code, you accept and agree to
+                    By accessing and using Charity Coder, you accept and agree to
                     be bound by the terms and provision of this agreement. If
                     you do not agree to abide by the above, please do not use
                     this service.
@@ -26,7 +26,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>2. Description of Service</h4>
                   <p>
-                    Charity Code is a platform that connects developers with
+                    Charity Coder is a platform that connects developers with
                     organizations and individuals who need technical assistance.
                     We provide a space for posting project requests and
                     submitting solutions.
@@ -38,7 +38,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>3. Privacy</h4>
                   <p>
-                    CharityCoder respects user privacy. We collect minimal
+                    Charity Coder respects user privacy. We collect minimal
                     personal information, such as your email address if
                     voluntarily provided. By using the Service, you agree to our
                     Privacy Policy.
@@ -50,7 +50,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>4. Content Guidelines</h4>
                   <p>
-                    All content uploaded to CharityCoder must be safe for work
+                    All content uploaded to Charity Coder must be safe for work
                     (SFW) and not infringe on the intellectual property rights
                     of others. Users may not upload copyrighted material without
                     permission. By uploading any content you represent and
@@ -64,7 +64,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>5. Copyright Infringement & DMCA Policy</h4>
                   <p>
-                    If you believe that any content on CharityCoder infringes on
+                    If you believe that any content on Charity Coder infringes on
                     your copyright, you may request its removal by submitting a
                     DMCA takedown request to contact@charitycoder.com with the
                     subject &quot;DMCA Takedown Request.&quot; Your request must
@@ -87,7 +87,7 @@ export default function Terms() {
                     </li>
                   </ul>
                   <p>
-                    CharityCoder complies with the Digital Millennium Copyright
+                    Charity Coder complies with the Digital Millennium Copyright
                     Act (DMCA) and will promptly remove infringing content when
                     notified properly.
                   </p>
@@ -98,7 +98,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>6. Liability Waiver for Third-Party Copyright Claims</h4>
                   <p>
-                    CharityCoder is not responsible for any copyright claims or
+                    Charity Coder is not responsible for any copyright claims or
                     legal actions resulting from user-uploaded content. Users
                     who upload infringing material assume full liability for any
                     claims, damages, or legal disputes that may arise.
@@ -110,7 +110,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>7. Age Requirement</h4>
                   <p>
-                    By using CharityCoder, you confirm that you are at least 18
+                    By using Charity Coder, you confirm that you are at least 18
                     years of age, or, if you are under 18, you have obtained
                     parental consent to use the Service.
                   </p>
@@ -122,7 +122,7 @@ export default function Terms() {
                   <h4>8. Dispute Resolution</h4>
                   <p>
                     In the event of disputes or complaints regarding content on
-                    CharityCoder, the admin will review and take appropriate
+                    Charity Coder, the admin will review and take appropriate
                     action. We encourage users to report inappropriate content.
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function Terms() {
                   <h4>9. Dispute Resolution</h4>
                   <p>
                     In the event of disputes or complaints regarding content on
-                    CharityCoder, the admin will review and take appropriate
+                    Charity Coder, the admin will review and take appropriate
                     action. We encourage users to report inappropriate content.
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function Terms() {
                 <div className="card-body">
                   <h4>10. Termination of Accounts</h4>
                   <p>
-                    RateMyDorm reserves the right to suspend or terminate user
+                    Charity Coder reserves the right to suspend or terminate user
                     accounts that violate these Terms, without prior notice.
                     Termination may result from content violations, fraudulent
                     activity, or misuse of the Service.

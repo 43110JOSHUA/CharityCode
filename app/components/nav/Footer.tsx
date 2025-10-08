@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container py-3">
         <div className="d-flex justify-content-center align-items-center flex-wrap gap-3">
           <span className="text-muted small">
-            © 2025 Charity Code
+            © 2025 Charity Coder
           </span>
           <div className="d-flex gap-3">
             <Link
