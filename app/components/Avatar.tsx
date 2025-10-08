@@ -10,8 +10,6 @@ const Avatar = ({ src }: Props) => {
       <Image
         src={src}
         alt="Avatar"
-        width={40}
-        height={40}
         className="rounded-circle"
         style={{ width: "40px", height: "40px" }}
       />
