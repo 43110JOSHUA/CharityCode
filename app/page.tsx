@@ -16,8 +16,7 @@ export default function Home() {
           <div className="row">
             <div className="col-12 text-center mb-3">
               <h2 className="display-4 fw-bold mb-3">
-                Helping developers build meaningful solutions to real-world
-                problems.
+                He
               </h2>
               <p className="lead">Helping organizations achieve their goals.</p>
             </div>
