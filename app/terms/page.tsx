@@ -67,7 +67,8 @@ export default function Terms() {
                     If you believe that any content on CharityCoder infringes on
                     your copyright, you may request its removal by submitting a
                     DMCA takedown request to contact@charitycoder.com with the
-                    subject "DMCA Takedown Request." Your request must include:
+                    subject &quot;DMCA Takedown Request.&quot; Your request must
+                    include:
                   </p>
                   <ul>
                     <li>A description of the copyrighted work.</li>
