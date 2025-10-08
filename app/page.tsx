@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import PageBorder from "./components/PageBorder";
 import Link from "next/link";
 

@@ -29,7 +29,7 @@ export default async function PostPage({ params }: PageProps) {
           <div className="container py-5">
             <div className="text-center">
               <h1>404 - Page not found</h1>
-              <p>The page you're looking for doesn't exist.</p>
+              <p>The page you&apos;re looking for doesn&apos;t exist.</p>
             </div>
           </div>
         </PageBorder>

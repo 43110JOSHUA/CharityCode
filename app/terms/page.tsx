@@ -8,9 +8,7 @@ export default function Terms() {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <h2 className="mb-4">Terms & Conditions</h2>
-              <p className="text-muted mb-4">
-                Last updated: 10/7/2025
-              </p>
+              <p className="text-muted mb-4">Last updated: 10/7/2025</p>
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
@@ -69,7 +67,7 @@ export default function Terms() {
                     If you believe that any content on CharityCoder infringes on
                     your copyright, you may request its removal by submitting a
                     DMCA takedown request to contact@charitycoder.com with the
-                    subject “DMCA Takedown Request.” Your request must include:
+                    subject "DMCA Takedown Request." Your request must include:
                   </p>
                   <ul>
                     <li>A description of the copyrighted work.</li>
@@ -157,7 +155,7 @@ export default function Terms() {
                   <h4>11. Modifications to Terms</h4>
                   <p>
                     We reserve the right to update these Terms at any time. It
-                    is the user's responsibility to regularly review these
+                    is the user&apos;s responsibility to regularly review these
                     Terms. Continued use of the Service after changes are made
                     constitutes acceptance of the modified Terms.
                   </p>

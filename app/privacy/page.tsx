@@ -8,9 +8,7 @@ export default function Privacy() {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <h2 className="mb-4">Privacy Policy</h2>
-              <p className="text-muted mb-4">
-                Last updated: 10/7/2025
-              </p>
+              <p className="text-muted mb-4">Last updated: 10/7/2025</p>
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
@@ -76,7 +74,7 @@ export default function Privacy() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>4. Children's Privacy</h4>
+                  <h4>4. Children&apos;s Privacy</h4>
                   <p>
                     Our website is not directed at individuals under 13, and we
                     do not knowingly collect personal information from children.

@@ -35,15 +35,15 @@ const OldPost: React.FC<OldPostProps> = ({ data, id }) => {
           <div className="card-body">
             <div className="d-flex justify-content-between align-items-top gap-2 mb-2">
               <div className="d-flex align-items-center gap-2 flex-wrap">
-                            <h5 className="card-title text-start mb-0">{data.title}</h5>
-                            <span className="text-muted text-start small">
-                              {data.username} •{" "}
-                              {data.timestamp &&
-                                formatDistanceToNow(data.timestamp.toDate(), {
-                                  addSuffix: true,
-                                }).replace("about ", "")}
-                            </span>
-                          </div>
+                <h5 className="card-title text-start mb-0">{data.title}</h5>
+                <span className="text-muted text-start small">
+                  {data.username} •{" "}
+                  {data.timestamp &&
+                    formatDistanceToNow(data.timestamp.toDate(), {
+                      addSuffix: true,
+                    }).replace("about ", "")}
+                </span>
+              </div>
               <span
                 className={`badge px-3 py-2 fs-6 mb-auto ${
                   data.open ? "bg-light-green" : "bg-secondary"
@@ -112,8 +112,8 @@ const OldPost: React.FC<OldPostProps> = ({ data, id }) => {
               Delete Post
             </h5>
             <p className="text-center text-muted mb-4">
-              Are you sure you want to delete "<strong>{data.title}</strong>"?
-              This action cannot be undone.
+              Are you sure you want to delete &quot;
+              <strong>{data.title}</strong>&quot;? This action cannot be undone.
             </p>
             <div className="d-flex gap-2 justify-content-center">
               <button

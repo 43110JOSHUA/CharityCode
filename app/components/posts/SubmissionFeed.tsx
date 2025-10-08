@@ -13,12 +13,23 @@ interface SubmissionFeedProps {
 interface SubmissionData {
   username: string;
   githubLink: string;
-  timestamp: any; // Changed from Date to any to handle various timestamp formats
+  timestamp: Date | { toDate: () => Date } | string | number; // Replace any with specific types
 }
 
 export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
   const [submissions, setSubmissions] = useState<SubmissionData[]>([]);
   const [loading, setLoading] = useState(true);
+
+  // Helper function to convert various timestamp formats to Date
+  const convertToDate = (
+    timestamp: Date | { toDate: () => Date } | string | number
+  ): Date => {
+    if (timestamp instanceof Date) return timestamp;
+    if (timestamp && typeof timestamp === "object" && "toDate" in timestamp) {
+      return timestamp.toDate();
+    }
+    return new Date(timestamp);
+  };
 
   useEffect(() => {
     const postRef = doc(firestore, "posts", postId);
@@ -31,8 +42,8 @@ export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
         // Sort submissions by timestamp (newest first)
         const sortedSubmissions = submissionsData.sort(
           (a: SubmissionData, b: SubmissionData) => {
-            const timeA = a.timestamp.toDate();
-            const timeB = b.timestamp.toDate();
+            const timeA = convertToDate(a.timestamp);
+            const timeB = convertToDate(b.timestamp);
             return timeB.getTime() - timeA.getTime();
           }
         );
@@ -76,7 +87,10 @@ export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
                 key={index}
                 username={submission.username}
                 githubLink={submission.githubLink}
-                timestamp={formatDistanceToNow(submission.timestamp.toDate(), { addSuffix: true })}
+                timestamp={formatDistanceToNow(
+                  convertToDate(submission.timestamp),
+                  { addSuffix: true }
+                )}
               />
             ))}
           </div>
