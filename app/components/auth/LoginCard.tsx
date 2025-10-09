@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useAuth } from "../../../context/auth";
+import { useAuth } from "@/context/auth";
 
 export default function LoginCard() {
   const auth = useAuth();
