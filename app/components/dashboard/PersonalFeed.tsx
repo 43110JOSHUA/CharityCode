@@ -5,7 +5,6 @@ import OldPost from "./OldPost";
 import {
   query,
   collection,
-  orderBy,
   onSnapshot,
   QueryDocumentSnapshot,
   DocumentData,
