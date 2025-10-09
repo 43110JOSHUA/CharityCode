@@ -10,6 +10,7 @@ export default function CreatePost() {
   const [fullDesc, setFullDesc] = useState("");
   const auth = useAuth();
   const username = auth?.currentUser?.displayName;
+  const email = auth?.currentUser?.email;
 
   async function sendPost() {
     await addDoc(collection(firestore, "posts"), {
@@ -17,6 +18,7 @@ export default function CreatePost() {
       shortDesc: shortDesc,
       fullDesc: fullDesc,
       username: username,
+      email: email,
       timestamp: serverTimestamp(),
       likes: [],
       submissions: [],
@@ -25,7 +27,7 @@ export default function CreatePost() {
 
     setTitle("");
     setShortDesc("");
-    setFullDesc("");  
+    setFullDesc("");
   }
 
   return (

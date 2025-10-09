@@ -30,12 +30,16 @@ export default function PersonalFeed() {
 
     const q = query(
       collection(firestore, "posts"),
-      where("username", "==", auth.currentUser.displayName || "Anonymous"),
-      orderBy("timestamp", "desc")
+      where("email", "==", auth.currentUser.email || "")
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const snapshotDocs = snapshot.docs;
+      // Sort the posts by timestamp on the client side
+      const snapshotDocs = snapshot.docs.sort((a, b) => {
+        const timestampA = a.data().timestamp?.toDate() || new Date(0);
+        const timestampB = b.data().timestamp?.toDate() || new Date(0);
+        return timestampB.getTime() - timestampA.getTime();
+      });
       setPosts(snapshotDocs);
       setLoading(false);
     });

@@ -15,6 +15,7 @@ export default function SubmitForm({ postId }: SubmitFormProps) {
   const [loading, setLoading] = useState(true);
   const auth = useAuth();
   const username = auth?.currentUser?.displayName;
+  const email = auth?.currentUser?.email;
 
   useEffect(() => {
     const postRef = doc(firestore, "posts", postId);
@@ -42,6 +43,7 @@ export default function SubmitForm({ postId }: SubmitFormProps) {
     await updateDoc(postRef, {
       submissions: arrayUnion({
         username: username || "Anonymous",
+        email: email || "",
         githubLink: githubUrl,
         timestamp: new Date(),
       }),
