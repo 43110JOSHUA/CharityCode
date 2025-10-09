@@ -4,6 +4,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-light-tan min-vh-100">
+      <meta
+        name="google-site-verification"
+        content="E6hE-ANzbZ9MGFhjFbE1_NmONKR5IDHnCuhHAQJ_Fgg"
+      />
       <PageBorder>
         <div className="container py-5">
           <div className="row">
