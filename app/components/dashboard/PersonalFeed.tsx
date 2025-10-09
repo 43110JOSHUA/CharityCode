@@ -34,12 +34,7 @@ export default function PersonalFeed() {
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      // Sort the posts by timestamp on the client side
-      const snapshotDocs = snapshot.docs.sort((a, b) => {
-        const timestampA = a.data().timestamp?.toDate() || new Date(0);
-        const timestampB = b.data().timestamp?.toDate() || new Date(0);
-        return timestampB.getTime() - timestampA.getTime();
-      });
+      const snapshotDocs = snapshot.docs;
       setPosts(snapshotDocs);
       setLoading(false);
     });
