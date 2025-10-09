@@ -73,7 +73,7 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title">Our Mission</h5>
                   <p className="card-text">
-                    To empower aspiring developers by providing them with
+                    To empower ambitious developers by providing them with
                     real-world project opportunities that build practical
                     skills, create meaningful portfolios, and make a positive
                     impact in their communities.
