@@ -47,15 +47,21 @@ export default function Privacy() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>2. Use of Information</h4>
+                  <h4>2. Use of Information </h4>
                   <p>
-                    We do not use your information anywhere else but in the
-                    website database for keeping track of your posts and likes.
-                    We do not sell, trade, or otherwise transfer your personal
-                    information to outside parties, except as required by law or
-                    for essential services like website hosting and analytics.
-                    Any third parties assisting us are required to keep your
-                    information confidential.
+                    Charity Coder accesses limited information from your Google
+                    account solely for platform functionality. We collect and
+                    use only your email address (only when provided) for account
+                    and post identification, and your Google username for
+                    display purposes on your submitted content. All Google
+                    account information stored in our database can be
+                    permanently removed by deleting your posts through your
+                    account dashboard. To request complete account deletion and
+                    removal from our authentication system, please contact us at
+                    contact@charitycoder.com with the subject line &quot;Account
+                    Deletion Request.&quot; We do not share, sell, or distribute
+                    your email address or any other personal information to
+                    third parties.
                   </p>
                 </div>
               </div>
