@@ -36,7 +36,28 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>3. Privacy Policy</h4>
+                  <h4>3. Google Account Information Usage</h4>
+                  <p>
+                    Charity Coder accesses limited information from your Google
+                    account solely for platform functionality. We collect and
+                    use only your email address for account identification and
+                    post attribution, and your Google username for display
+                    purposes on your submitted content. All Google account
+                    information stored in our database can be permanently
+                    removed by deleting your posts through your account
+                    dashboard. To request complete account deletion and removal
+                    from our authentication system, please contact us at
+                    contact.charitycoder@gmail.com with the subject line &quot;Account
+                    Deletion Request.&quot; We do not share, sell, or distribute
+                    your email address or any other personal information to
+                    third parties.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card bg-tan mb-4">
+                <div className="card-body">
+                  <h4>4. Privacy Policy</h4>
                   <p>
                     Charity Coder respects user privacy. We collect minimal
                     personal information, such as your email address if
@@ -48,7 +69,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>4. Content Guidelines</h4>
+                  <h4>5. Content Guidelines</h4>
                   <p>
                     All content uploaded to Charity Coder must be safe for work
                     (SFW) and not infringe on the intellectual property rights
@@ -62,11 +83,11 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>5. Copyright Infringement & DMCA Policy</h4>
+                  <h4>6. Copyright Infringement & DMCA Policy</h4>
                   <p>
                     If you believe that any content on Charity Coder infringes
                     on your copyright, you may request its removal by submitting
-                    a DMCA takedown request to contact@charitycoder.com with the
+                    a DMCA takedown request to contact.charitycoder@gmail.com with the
                     subject &quot;DMCA Takedown Request.&quot; Your request must
                     include:
                   </p>
@@ -96,7 +117,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>6. Liability Waiver for Third-Party Copyright Claims</h4>
+                  <h4>7. Liability Waiver for Third-Party Copyright Claims</h4>
                   <p>
                     Charity Coder is not responsible for any copyright claims or
                     legal actions resulting from user-uploaded content. Users
@@ -108,7 +129,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>7. Age Requirement</h4>
+                  <h4>8. Age Requirement</h4>
                   <p>
                     By using Charity Coder, you confirm that you are at least 18
                     years of age, or, if you are under 18, you have obtained
@@ -119,7 +140,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>8. Dispute Resolution</h4>
+                  <h4>9. Dispute Resolution</h4>
                   <p>
                     In the event of disputes or complaints regarding content on
                     Charity Coder, the admin will review and take appropriate
@@ -130,7 +151,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>9. Limitation of Liability</h4>
+                  <h4>10. Limitation of Liability</h4>
                   <p>
                     Charity Coder is provided &quot;as is&quot; and without
                     warranties of any kind. We do not guarantee the accuracy,
@@ -144,7 +165,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>10. Termination of Accounts</h4>
+                  <h4>11. Termination of Accounts</h4>
                   <p>
                     Charity Coder reserves the right to suspend or terminate
                     user accounts that violate these Terms, without prior
@@ -156,7 +177,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>11. Modifications to Terms</h4>
+                  <h4>12. Modifications to Terms</h4>
                   <p>
                     We reserve the right to update these Terms at any time. It
                     is the user&apos;s responsibility to regularly review these
@@ -168,7 +189,7 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>12. Governing Law</h4>
+                  <h4>13. Governing Law</h4>
                   <p>
                     These Terms shall be governed by and construed in accordance
                     with the laws of [Your State], without regard to its
@@ -179,12 +200,12 @@ export default function Terms() {
 
               <div className="card bg-tan mb-4">
                 <div className="card-body">
-                  <h4>13. Contact Us</h4>
+                  <h4>14. Contact Us</h4>
                   <p>
                     If you have any questions about these Terms, you can contact
                     us at:
                   </p>
-                  <p>contact@charitycoder.com</p>
+                  <p>contact.charitycoder@gmail.com</p>
                 </div>
               </div>
             </div>

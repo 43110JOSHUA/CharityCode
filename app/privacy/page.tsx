@@ -58,7 +58,7 @@ export default function Privacy() {
                     permanently removed by deleting your posts through your
                     account dashboard. To request complete account deletion and
                     removal from our authentication system, please contact us at
-                    contact@charitycoder.com with the subject line &quot;Account
+                    contact.charitycoder@gmail.com with the subject line &quot;Account
                     Deletion Request.&quot; We do not share, sell, or distribute
                     your email address or any other personal information to
                     third parties.
@@ -85,8 +85,8 @@ export default function Privacy() {
                     Our website is not directed at individuals under 13, and we
                     do not knowingly collect personal information from children.
                     If you believe a child has provided us with personal data,
-                    please contact us at contact@charitycoder.com, and we will
-                    take appropriate steps to remove the information.
+                    please contact us at contact.charitycoder@gmail.com, and we
+                    will take appropriate steps to remove the information.
                   </p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function Privacy() {
                     If you have any questions about these Terms, you can contact
                     us at:
                   </p>
-                  <p>contact@charitycoder.com</p>
+                  <p>contact.charitycoder@gmail.com</p>
                 </div>
               </div>
             </div>
