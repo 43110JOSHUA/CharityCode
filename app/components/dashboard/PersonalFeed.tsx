@@ -13,7 +13,11 @@ import {
 import { firestore } from "../../../firebase/client";
 import { useAuth } from "../../../context/auth";
 
-export default function PersonalFeed() {
+interface PersonalFeedProps {
+  onPostCountChange: (count: number) => void;
+}
+
+export default function PersonalFeed({ onPostCountChange }: PersonalFeedProps) {
   const [posts, setPosts] = useState<
     QueryDocumentSnapshot<DocumentData, DocumentData>[]
   >([]);
@@ -24,6 +28,7 @@ export default function PersonalFeed() {
     if (!auth?.currentUser) {
       setPosts([]);
       setLoading(false);
+      onPostCountChange(0); // Reset count when no user
       return;
     }
 
@@ -36,6 +41,8 @@ export default function PersonalFeed() {
       const snapshotDocs = snapshot.docs;
       setPosts(snapshotDocs);
       setLoading(false);
+      // Update the post count in the parent component
+      onPostCountChange(snapshotDocs.length);
     });
 
     return unsubscribe;
