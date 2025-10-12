@@ -83,8 +83,8 @@ export default function CreatePost({
         {!canCreatePost && (
           <div className="alert alert-warning mb-3">
             <small>
-              You've reached the maximum of {maxPosts} posts. Delete an old post
-              to create a new one.
+              You&apos;ve reached the maximum of {maxPosts} posts. Delete an old
+              post to create a new one.
             </small>
           </div>
         )}

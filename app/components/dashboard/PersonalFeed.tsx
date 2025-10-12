@@ -46,7 +46,7 @@ export default function PersonalFeed({ onPostCountChange }: PersonalFeedProps) {
     });
 
     return unsubscribe;
-  }, [auth?.currentUser]);
+  }, [auth?.currentUser, onPostCountChange]);
 
   if (loading) {
     return (
