@@ -1,5 +1,6 @@
 import PageBorder from "./components/PageBorder";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -44,46 +45,67 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="row g-4">
-            <div className="col-md-6 col-lg-4">
-              <div className="card h-100 shadow border-danger border-3">
-                <div className="card-body">
-                  <h5 className="card-title">For Developers</h5>
-                  <p className="card-text">
-                    Use your coding skills to help people, organizations, or
-                    companies build and improve their digital presence.
-                    Contribute to meaningful projects that make a real
-                    difference in the world.
-                  </p>
-                </div>
-              </div>
+          {/* For Developers - Image on Right */}
+          <div className="row px-2 px-lg-5 align-items-center">
+            <div className="col-md-8 col-lg-6 order-2 order-md-1">
+              <h5 className="fw-bold mb-3 text-center">For Developers</h5>
+              <p>
+                Use your coding skills to help people, organizations, or
+                companies build and improve their digital presence. Contribute
+                to meaningful projects that make a real difference in the world.
+              </p>
             </div>
-
-            <div className="col-md-6 col-lg-4">
-              <div className="card h-100 shadow border-success border-3">
-                <div className="card-body">
-                  <h5 className="card-title">For Organizations</h5>
-                  <p className="card-text">
-                    Connect with ambitious developers who can help you create
-                    websites, apps, and digital tools to expand your reach and
-                    improve your impact in the community.
-                  </p>
-                </div>
-              </div>
+            <div className="col-md-4 col-lg-6 text-center order-1 order-md-2">
+              <Image
+                src="/siteOrange.png"
+                alt="For Developers"
+                width="300"
+                height="300"
+                className="img-fluid"
+              />
             </div>
+          </div>
 
-            <div className="col-md-6 col-lg-4">
-              <div className="card h-100 shadow border-warning border-3">
-                <div className="card-body">
-                  <h5 className="card-title">Our Mission</h5>
-                  <p className="card-text">
-                    To empower ambitious developers by providing them with
-                    real-world project opportunities that build practical
-                    skills, create meaningful portfolios, and make a positive
-                    impact in their communities.
-                  </p>
-                </div>
-              </div>
+          {/* For Organizations - Image on Left */}
+          <div className="row px-2 px-lg-5 align-items-center">
+            <div className="col-md-4 col-lg-6 text-center">
+              <Image
+                src="/sitePurple.png"
+                alt="For Organizations"
+                width="300"
+                height="300"
+                className="img-fluid"
+              />
+            </div>
+            <div className="col-md-8 col-lg-6">
+              <h5 className="fw-bold mb-3 text-center">For Organizations</h5>
+              <p>
+                Connect with ambitious developers who can help you create
+                websites, apps, and digital tools to expand your reach and
+                improve your impact in the community.
+              </p>
+            </div>
+          </div>
+
+          {/* Our Mission - Image on Right */}
+          <div className="row px-2 px-lg-5 align-items-center">
+            <div className="col-md-8 col-lg-6 order-2 order-md-1">
+              <h5 className="fw-bold mb-3 text-center">Our Mission</h5>
+              <p>
+                To empower ambitious developers by providing them with
+                real-world project opportunities that build practical skills,
+                create meaningful portfolios, and make a positive impact in
+                their communities.
+              </p>
+            </div>
+            <div className="col-md-4 col-lg-6 text-center order-1 order-md-2">
+              <Image
+                src="/sitePurple.png"
+                alt="Our Mission"
+                width="300"
+                height="300"
+                className="img-fluid"
+              />
             </div>
           </div>
         </div>
