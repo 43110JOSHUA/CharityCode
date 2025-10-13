@@ -100,7 +100,7 @@ export default function Home() {
             </div>
             <div className="col-md-4 col-lg-6 text-center order-1 order-md-2">
               <Image
-                src="/sitePurple.png"
+                src="/siteBlue.png"
                 alt="Our Mission"
                 width="300"
                 height="300"
