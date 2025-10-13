@@ -92,10 +92,10 @@ export default function Home() {
             <div className="col-md-8 col-lg-6 order-2 order-md-1">
               <h5 className="fw-bold mb-3 text-center">Our Mission</h5>
               <p>
-                To empower ambitious developers by providing them with
-                real-world project opportunities that build practical skills,
-                create meaningful portfolios, and make a positive impact in
-                their communities.
+                To connect passionate developers with organizations that need
+                their skills, creating meaningful partnerships that drive
+                positive change in communities while providing developers with
+                real-world experience and impactful projects.
               </p>
             </div>
             <div className="col-md-4 col-lg-6 text-center order-1 order-md-2">
