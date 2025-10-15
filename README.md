@@ -4,7 +4,7 @@ A full-stack social platform connecting developers with organizations needing te
 
 ## 🌐 Live Site
 
-[Visit CharityCode](https://charitycoder.com)
+[Visit CharityCode](https://charitycoder.com/)
 
 ## 📖 Description
 
@@ -40,6 +40,10 @@ First, install dependencies:
 ```bash
 npm install
 ```
+
+Then, run the development server:
+
+set up firebase project at (https://firebase.google.com/). Copy and paste client credentials into .env file.
 
 Then, run the development server:
 
