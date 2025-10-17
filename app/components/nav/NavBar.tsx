@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Avatar from "../Avatar";
 import MenuButton from "./MenuButton";
 import SearchBar from "./SearchBar";
@@ -29,7 +29,15 @@ const NavBar = () => {
                 </h4>
               </Link>
             </div>
-            <SearchBar />
+            <Suspense
+              fallback={
+                <div className="text-center">
+                  <p className="text-muted">Loading...</p>
+                </div>
+              }
+            >
+              <SearchBar />
+            </Suspense>
             <MenuButton icon="bi bi-list" onClick={toggleSideNav} />
           </nav>
         </PageBorder>
