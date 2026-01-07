@@ -18,7 +18,7 @@ export default function SearchBar() {
         replace("/explore");
       }
     }
-  }, 300);
+  }, 600);
 
   return (
     <div className="input-group" style={{ maxWidth: "600px" }}>
