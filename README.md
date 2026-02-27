@@ -1,6 +1,6 @@
 # CharityCode
 
-A full-stack social platform connecting developers with organizations needing technical solutions, serving as a project marketplace for real-world development opportunities.
+A full-stack social platform connecting developers with organizations needing technical solutions.
 
 ## 🌐 Live Site
 
@@ -8,17 +8,16 @@ A full-stack social platform connecting developers with organizations needing te
 
 ## 📖 Description
 
-CharityCode bridges the gap between talented developers and organizations seeking digital solutions. Our platform enables:
+CharityCode enables:
 
-- **Developers** to contribute their coding skills to meaningful projects that make a real difference
-- **Organizations** to access talented developers for websites, apps, and digital tools to expand their reach
-- **Communities** to benefit from improved digital presence and technological solutions
+- **Developers** to contribute their coding skills to meaningful projects.
+- **Organizations** to access talented developers for websites, apps, and digital tools.
 
 ## 🚀 Overview
 
 - **Project Posting**: Organizations can create detailed project posts describing their needs
 - **Developer Exploration**: Developers can browse and discover projects that match their skills and interests
-- **Collaboration Hub**: Built-in submission system for developers to propose solutions
+- **Solution Submission**: submission system for developers to propose solutions
 - **Community Features**: Like system to highlight popular projects
 - **User Dashboard**: Personalized space for managing posts and tracking submissions
 
@@ -26,12 +25,12 @@ CharityCode bridges the gap between talented developers and organizations seekin
 
 This project is built with:
 
-- **Next.js 14** - React framework for production
-- **Firebase** - Authentication and Firestore database
-- **Bootstrap 5** - Responsive UI framework
-- **TypeScript** - Type-safe JavaScript
-- **React** - Component-based UI library
-- **Date-fns** - Date utility library
+- **Next.js 14**
+- **Firebase**
+- **Bootstrap 5**
+- **TypeScript**
+- **React**
+- **Date-fns**
 
 ## 🛠️ Getting Started
 
