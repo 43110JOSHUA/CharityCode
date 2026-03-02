@@ -1,6 +1,5 @@
 "use client";
 
-import PageBorder from "../components/PageBorder";
 import LoginCard from "../components/auth/LoginCard";
 import { useAuth } from "../../context/auth";
 import CreatePost from "../components/dashboard/CreatePost";
@@ -15,7 +14,7 @@ export default function Dashboard() {
 
   return (
     <div className="bg-light-tan min-vh-100">
-      <PageBorder>
+      <div className="page-border">
         {!auth?.currentUser && <LoginCard />}
         <div className="container py-5">
           <div className="row pt-2">
@@ -34,7 +33,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-      </PageBorder>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,7 @@
-import PageBorder from "../components/PageBorder";
-
 export default function Terms() {
   return (
     <div className="bg-light-tan min-vh-100">
-      <PageBorder>
+      <div className="page-border">
         <div className="container py-5">
           <div className="row justify-content-center">
             <div className="col-lg-8">
@@ -211,7 +209,7 @@ export default function Terms() {
             </div>
           </div>
         </div>
-      </PageBorder>
+      </div>
     </div>
   );
 }

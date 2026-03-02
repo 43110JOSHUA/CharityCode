@@ -29,3 +29,21 @@
   cursor: pointer;
 }
 
+.page-border {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .page-border {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-border {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}

@@ -4,7 +4,6 @@ import Avatar from "../Avatar";
 import MenuButton from "./MenuButton";
 import SearchBar from "./SearchBar";
 import SideNav from "./SideNav";
-import PageBorder from "../PageBorder";
 import Link from "next/link";
 
 const NavBar = () => {
@@ -17,7 +16,7 @@ const NavBar = () => {
   return (
     <>
       <div className="bg-tan sticky-top border-bottom border-border-tan">
-        <PageBorder>
+        <div className="page-border">
           <nav className="d-flex gap-3 justify-content-between align-items-center py-2 px-3">
             <div className="d-flex gap-2 align-items-center">
               <Link href="/" className="text-decoration-none">
@@ -40,7 +39,7 @@ const NavBar = () => {
             </Suspense>
             <MenuButton icon="bi bi-list" onClick={toggleSideNav} />
           </nav>
-        </PageBorder>
+        </div>
       </div>
 
       <SideNav isOpen={isSideNavOpen} onClose={() => setIsSideNavOpen(false)} />

@@ -1,4 +1,3 @@
-import PageBorder from "../components/PageBorder";
 import PostFeed from "../components/posts/PostFeed";
 
 export default async function Explore({
@@ -12,9 +11,9 @@ export default async function Explore({
   const query = (await searchParams)?.search_query || "";
   return (
     <div className="bg-light-tan min-vh-100">
-      <PageBorder>
+      <div className="page-border">
         <PostFeed search_query={query} />
-      </PageBorder>
+      </div>
     </div>
   );
 }

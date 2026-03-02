@@ -1,5 +1,4 @@
 import React from "react";
-import PageBorder from "../components/PageBorder";
 import { getDoc, doc } from "firebase/firestore";
 import { firestore } from "../../firebase/client";
 import Link from "next/link";
@@ -25,21 +24,21 @@ export default async function PostPage({ params }: PageProps) {
   if (!post) {
     return (
       <div className="bg-light-tan min-vh-100">
-        <PageBorder>
+        <div className="page-border">
           <div className="container py-5">
             <div className="text-center">
               <h1>404 - Page not found</h1>
               <p>The page you&apos;re looking for doesn&apos;t exist.</p>
             </div>
           </div>
-        </PageBorder>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="bg-light-tan min-vh-100">
-      <PageBorder>
+      <div className="page-border">
         <div className="container py-5">
           <div className="row justify-content-center">
             <div className="col-lg-8">
@@ -110,7 +109,7 @@ export default async function PostPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-      </PageBorder>
+      </div>
     </div>
   );
 }

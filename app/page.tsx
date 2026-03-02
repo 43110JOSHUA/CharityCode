@@ -1,4 +1,3 @@
-import PageBorder from "./components/PageBorder";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,7 +8,7 @@ export default function Home() {
         name="google-site-verification"
         content="E6hE-ANzbZ9MGFhjFbE1_NmONKR5IDHnCuhHAQJ_Fgg"
       />
-      <PageBorder>
+      <div className="page-border">
         <div className="container py-5">
           <div className="row">
             <div className="col-12 text-center mb-3 mt-5">
@@ -109,7 +108,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </PageBorder>
+      </div>
     </div>
   );
 }
