@@ -11,6 +11,7 @@ import {
   DocumentData,
 } from "firebase/firestore";
 import { firestore } from "../../../firebase/client";
+import { matchesSearchQuery } from "@/lib/utils";
 
 export default function PostFeed({ search_query }: { search_query?: string }) {
   const [posts, setPosts] = useState<
@@ -32,19 +33,9 @@ export default function PostFeed({ search_query }: { search_query?: string }) {
   }, []);
 
   // Filter posts based on search query
-  const filteredPosts = posts.filter((post) => {
-    if (!search_query) return true;
-
-    const data = post.data();
-    const searchTerm = search_query.toLowerCase();
-
-    return (
-      data.title?.toLowerCase().includes(searchTerm) ||
-      data.shortDesc?.toLowerCase().includes(searchTerm) ||
-      data.fullDesc?.toLowerCase().includes(searchTerm) ||
-      data.username?.toLowerCase().includes(searchTerm)
-    );
-  });
+  const filteredPosts = posts.filter((post) =>
+    matchesSearchQuery(post.data(), search_query ?? "")
+  );
 
   return (
     <div>

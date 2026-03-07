@@ -26,7 +26,8 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": [
     "**/*.ts",
@@ -34,7 +35,8 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "src/app/components/nav/NavBar.tsx",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules"

@@ -5,6 +5,7 @@ import Submission from "./Submission";
 import { doc, onSnapshot, DocumentData } from "firebase/firestore";
 import { firestore } from "../../../firebase/client";
 import { formatDistanceToNow } from "date-fns";
+import { convertToDate } from "@/lib/utils";
 
 interface SubmissionFeedProps {
   postId: string;
@@ -19,17 +20,6 @@ interface SubmissionData {
 export default function SubmissionFeed({ postId }: SubmissionFeedProps) {
   const [submissions, setSubmissions] = useState<SubmissionData[]>([]);
   const [loading, setLoading] = useState(true);
-
-  // Helper function to convert various timestamp formats to Date
-  const convertToDate = (
-    timestamp: Date | { toDate: () => Date } | string | number
-  ): Date => {
-    if (timestamp instanceof Date) return timestamp;
-    if (timestamp && typeof timestamp === "object" && "toDate" in timestamp) {
-      return timestamp.toDate();
-    }
-    return new Date(timestamp);
-  };
 
   useEffect(() => {
     const postRef = doc(firestore, "posts", postId);
