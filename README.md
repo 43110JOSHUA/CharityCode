@@ -25,12 +25,13 @@ CharityCode enables:
 
 This project is built with:
 
-- **Next.js 14**
+- **Next.js 15**
 - **Firebase**
 - **Bootstrap 5**
 - **TypeScript**
 - **React**
 - **Date-fns**
+- **use-debounce**
 
 ## 🛠️ Getting Started
 
@@ -40,9 +41,7 @@ First, install dependencies:
 npm install
 ```
 
-Then, run the development server:
-
-set up firebase project at (https://firebase.google.com/). Copy and paste client credentials into .env file.
+Set up a Firebase project at [https://firebase.google.com/](https://firebase.google.com/) and copy your client credentials into a `.env.local` file.
 
 Then, run the development server:
 
@@ -51,3 +50,45 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## 📁 Project Structure
+
+```
+app/
+├── components/
+│   ├── auth/
+│   │   ├── LoginCard.tsx
+│   │   └── auth-buttons.tsx
+│   ├── nav/
+│   │   ├── NavBar.tsx
+│   │   ├── SideNav.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── MenuButton.tsx
+│   │   └── Footer.tsx
+│   ├── posts/
+│   │   ├── ProjectPost.tsx
+│   │   ├── PostFeed.tsx
+│   │   ├── LikeButton.tsx
+│   │   ├── Submission.tsx
+│   │   ├── SubmissionFeed.tsx
+│   │   └── SubmitForm.tsx
+│   ├── dashboard/
+│   │   ├── CreatePost.tsx
+│   │   ├── PersonalFeed.tsx
+│   │   └── OldPost.tsx
+│   └── Avatar.tsx
+├── __tests__/
+│   ├── components/
+│   │   ├── dashboard/
+│   │   ├── nav/
+│   │   └── posts/
+│   └── context/
+├── [postid]/           # Dynamic post detail page
+├── dashboard/          # User dashboard page
+├── explore/            # Browse projects page
+├── privacy/
+├── terms/
+├── layout.tsx
+├── page.tsx
+└── globals.css
+```
